@@ -1,0 +1,28 @@
+/* ----------------------  LOAD FONTS FROM SERVER ------------------------------ */
+
+@font-face {
+ font-family: "GrotzecCond-Demibold";
+  src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/GrotzecCond-Demibold3.woff2);
+}  
+
+@font-face {
+ font-family: "GrotzecCond-DemiboldItalic";
+  src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/GrotzecCond-DemiboldItalic.woff2);
+}  
+
+@font-face {
+ font-family: "LeJeunePoster-Regular";
+  src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/LeJeunePoster-Regular.otf);
+} 
+
+@font-face {
+ font-family: "LeJeunePoster-RegularItalic";
+  src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/LeJeunePoster-RegularItalic.otf);
+}
+
+/* ----------------------  BASIC CSS FOR MY STORY ------------------------------ */
+
+* {
+    box-sizing: border-box;
+    
+}
