@@ -1,3 +1,19 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .step-section {
+    display: none;
+    padding: 40px 0;
+    font-size: 17px;
+  }
+  
+  .step-section.is-visible {
+    display: block;
+  }
+  
+
+
 :root{ 
     --bg:#0b0f14; 
     --ink:#f0f3f7; 
@@ -14,7 +30,7 @@
 html,body{margin:0;padding:0}
 body{
     font-family: "Georgia","Times",serif;
-    font-size: 18px; 
+    font-size: 17px; 
     background: var(--bg); 
     color: var(--ink); 
     line-height:1.6;
@@ -26,15 +42,14 @@ body{
 .center{text-align:center}
 
 
-h1,h2,h3,p{margin:0 0 12px} 
-.subtitle{color:var(--muted)} 
+h1,h2,h3,p{margin:0 0 10px} 
+
 .byline{
     font-family: "BentonSansCondBold","Arial",sans-serif;
-    font-size: 14px;
     margin: 8px 0;
     text-align: center;
-    color:#c6d0db; 
-    font-weight:600
+    color:white; 
+    font-weight:bold
 } 
 .kicker{color:var(--muted)}
 
@@ -114,11 +129,6 @@ h1,h2,h3,p{margin:0 0 12px}
     outline:2px solid var(--accent)}
 
 
-.progress-host{display:flex; justify-content:center; margin:10px 0 24px}
-.progress-bar{position:relative; width:50vw; height:var(--bar-h);} .progress-track{height:var(--bar-h); 
-    background:var(--track); border-radius:999px; position:absolute; inset:0;}
-
-
 .indicator-line{
     position:absolute; 
     top:0; 
@@ -147,6 +157,32 @@ h1,h2,h3,p{margin:0 0 12px}
     inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.20), rgba(0,0,0,.12) 30%, rgba(11,15,20,85) 95%)
 }
 
+.step-section,
+.step-section p,
+.step-section h2,
+.step-section h3,
+.step-section li,
+.step-section .info-panel,
+#resultSection,
+#resultSection p,
+#resultSection h2,
+#resultSection h3,
+#resultSection li {
+  color: white;
+}
+
+.choices .chip,
+.choices .card {
+  color: white;
+}
+
+
+.choices .chip.active,
+.choices .card.active {
+  color: white;
+}
+
+
 
 .scroll-hint{
     position:absolute;bottom:14px;
@@ -158,17 +194,18 @@ h1,h2,h3,p{margin:0 0 12px}
 }
 
 .copy{color:#d9e2ec} 
-.copy .lede{font-weight:500}
+.copy .lede{font-weight:400; font-size: 16px;}
 
 main.main{
     font-family: "Georgia","Times",serif;
-    font-size: 18px;
+    font-size: 17px;
     min-height:calc(100vh - 220px); 
     display:flex; 
     flex-direction:column; 
     align-items:center; 
     justify-content:center
 }
+
 
 .score-badge{
     font-size: clamp(2rem, 7vw, 5rem); 
@@ -211,10 +248,209 @@ main.main{
 
 .restart{text-align:center; margin-top:12px}
 
+#storySection p {
+    font-size: 20px;
+    line-height: 2.0;
+  }
+
 
 @media (max-width: 900px){ 
     .container, .progress-bar{width:88vw} 
     .info-panel ul{max-width:80vw} 
     .choices.grid{grid-template-columns:repeat(2, 1fr)} 
     .choices.split{grid-template-columns:1fr} 
+}
+
+.story-image {
+    margin: 24px 0;
+  }
+  
+  .story-image img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .story-image figcaption {
+    font-size: 14px;
+    color: lightgray;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
+
+  
+
+.viz-block {
+    margin: 32px 0 24px;
+  }
+  
+  .viz-title {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+    color: #ffffff;
+  }
+  
+  .viz-caption {
+    margin-bottom: 0px;
+  }
+  
+
+  .visa-bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .visa-bar {
+    display: grid;
+    grid-template-columns: 90px 1fr 110px;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+  
+  .visa-label {
+    color: #e5e9f0;
+  }
+  
+  .visa-bar-track {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    height: 12px;
+    overflow: hidden;
+  }
+  
+  .visa-bar-fill {
+    position: absolute;
+    height: 100%;
+    border-radius: 999px;
+  }
+  
+  .visa-bar-fill.lottery {
+    background: linear-gradient(90deg, #ff5c7a, #ff9966);
+  }
+  
+  .visa-bar-fill.special {
+    background: linear-gradient(90deg, #4dd0ff, #80ffea);
+  }
+  
+  .visa-tag {
+    text-align: right;
+    color: #cbd3dd;
+  }
+  
+  .visa-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #cbd3dd;
+  }
+  
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .legend-swatch {
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    border-radius: 999px;
+  }
+  
+  .legend-swatch.lottery {
+    background: linear-gradient(90deg, #ff5c7a, #ff9966);
+  }
+  
+  .legend-swatch.special {
+    background: linear-gradient(90deg, #4dd0ff, #80ffea);
+  }
+  
+  @media (max-width: 600px) {
+    .visa-bar {
+      grid-template-columns: 80px 1fr;
+      grid-template-rows: auto auto;
+    }
+  
+    .visa-tag {
+      grid-column: 1 / -1;
+      text-align: left;
+      font-size: 0.75rem;
+      opacity: 0.85;
+    }
+  }
+  
+
+.opt-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #cbd3dd;
+  margin: 8px 0 4px;
+}
+
+.opt-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.opt-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.opt-label {
+  width: 70px;
+  font-size: 0.85rem;
+  color: #e5e9f0;
+}
+
+.opt-track {
+  position: relative;
+  flex: 1;
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.opt-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+}
+
+.opt-fill.nonstem {
+  width: 33%;
+  background: linear-gradient(90deg, #ff5c7a, #ff9966);
+}
+
+.opt-fill.stem {
+  width: 100%;
+  background: linear-gradient(90deg, #4dd0ff, #80ffea);
+}
+
+.opt-end-label {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 600px) {
+  .opt-label {
+    width: 60px;
+  }
 }
