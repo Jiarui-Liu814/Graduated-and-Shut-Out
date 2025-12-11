@@ -291,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const explain = document.getElementById('scoreExplain');
         if (explain) {
           explain.innerHTML = `
-            <p>Your selections suggest a <strong>${score}/10</strong> difficulty in securing a first U.S. role with sponsorship.</p>
+            <p>Your selections suggest a <strong>${score}/10</strong> difficulty in securing a first U.S. role with sponsorship, <span style="color: red;">where 1 means relatively easy to find a job and 10 means extremely difficult.</span></p>
             <p>${parts.join(' ')}</p>
           `;
         }
